@@ -6,6 +6,7 @@ import {
 import { useAuth } from '../context/AuthContext';
 import { useCourses } from '../context/CourseContext';
 import CertificateModal from '../components/CertificateModal';
+import AdminDashboard from '../components/admin/AdminDashboard';
 
 export default function StudentDashboard({ setActivePage, onSelectCourse, onOpenLesson }) {
   const { user, logout } = useAuth();
@@ -21,6 +22,11 @@ export default function StudentDashboard({ setActivePage, onSelectCourse, onOpen
         <button onClick={() => setActivePage('home')} className="btn btn-primary">Return Home</button>
       </div>
     );
+  }
+
+  // Directly render Admin Portal when authenticated as Admin
+  if (user.role === 'admin' || user.email?.toLowerCase().includes('admin')) {
+    return <AdminDashboard onBackToApp={() => setActivePage('home')} />;
   }
 
   const enrolledCourses = courses.filter(c => user.enrolledCourses?.includes(c.id)) || [courses[0]];
