@@ -363,6 +363,7 @@ export const CourseProvider = ({ children }) => {
   const [speakingClub, setSpeakingClub] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [activeLevelFilter, setActiveLevelFilter] = useState('All');
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
