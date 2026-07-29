@@ -13,6 +13,7 @@ export default function CourseCard({ course, onSelectCourse }) {
         <img
           src={course.coverImage}
           alt={course.title}
+          loading="lazy"
           style={{
             width: '100%',
             height: '100%',
