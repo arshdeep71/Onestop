@@ -194,22 +194,6 @@ export default function StudentDashboard({ setActivePage, onSelectCourse, onOpen
                 <div style={{ fontSize: '0.75rem', color: '#7E22CE', fontWeight: '700', marginTop: '0.2rem' }}>2 Courses • 1 Interview Completed</div>
               </div>
             </div>
-                <div style={{ fontSize: '0.75rem', fontWeight: '600', color: '#9A3412' }}>Learning Streak</div>
-              </div>
-
-              <div style={{
-                backgroundColor: '#F0FDF4',
-                border: '1px solid #DCFCE7',
-                borderRadius: '16px',
-                padding: '1rem 1.25rem',
-                textAlign: 'center'
-              }}>
-                <div style={{ color: '#15803D', fontWeight: '800', fontSize: '1.3rem' }}>
-                  {user.dailyProgressMinutes || 15}/{user.dailyGoalMinutes || 20} min
-                </div>
-                <div style={{ fontSize: '0.75rem', fontWeight: '600', color: '#166534' }}>Daily Goal</div>
-              </div>
-            </div>
           </div>
 
           {/* Continue Learning Highlight Banner */}
