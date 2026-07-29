@@ -24,6 +24,10 @@ function MainAppContent() {
   const [activeResource, setActiveResource] = useState(null);
   const [authModalMode, setAuthModalMode] = useState(null); // 'login' | 'register' | null
 
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activePage]);
+
   // Navigation Handlers
   const handleSelectCourse = (course) => {
     setSelectedCourse(course);
