@@ -1,0 +1,35 @@
+[
+  {
+    "id": "lc1",
+    "topic": "Mastering Small Talk & Networking Fluency",
+    "instructor": "Sarah Jenkins",
+    "instructorAvatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
+    "date": "This Thursday • 7:00 PM EST",
+    "duration": "60 Minutes",
+    "attendees": 420,
+    "status": "Upcoming",
+    "badge": "Interactive Practice"
+  },
+  {
+    "id": "lc2",
+    "topic": "How to Ace the 'Tell Me About Yourself' Question",
+    "instructor": "Priya Sharma",
+    "instructorAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+    "date": "Saturday • 11:00 AM EST",
+    "duration": "75 Minutes",
+    "attendees": 650,
+    "status": "Upcoming",
+    "badge": "Interview Bootcamp"
+  },
+  {
+    "id": "lc3",
+    "topic": "Overcoming Stage Fright & Vocal Shyness",
+    "instructor": "Marcus Vance",
+    "instructorAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+    "date": "Next Tuesday • 8:00 PM EST",
+    "duration": "60 Minutes",
+    "attendees": 310,
+    "status": "Upcoming",
+    "badge": "Public Speaking"
+  }
+]

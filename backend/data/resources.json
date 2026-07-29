@@ -1,0 +1,68 @@
+[
+  {
+    "id": "r1",
+    "title": "Complete English Grammar PDF Cheat Sheet",
+    "category": "Grammar",
+    "type": "PDF Guide",
+    "pages": "45 Pages",
+    "downloads": "28.4k",
+    "description": "A quick visual summary of all 12 tenses, common preposition rules, and active/passive voice formulas.",
+    "downloadUrl": "#",
+    "icon": "FileText"
+  },
+  {
+    "id": "r2",
+    "title": "1,000 High-Frequency English Vocabulary eBook",
+    "category": "Vocabulary",
+    "type": "eBook",
+    "pages": "80 Pages",
+    "downloads": "34.1k",
+    "description": "Categorized words, collocations, audio pronunciation guide, and real-life sentence examples.",
+    "downloadUrl": "#",
+    "icon": "BookOpen"
+  },
+  {
+    "id": "r3",
+    "title": "Job Interview Q&A Preparation Master Guide",
+    "category": "Career",
+    "type": "PDF Worksheets",
+    "pages": "32 Pages",
+    "downloads": "19.8k",
+    "description": "50 STAR-method answers for difficult questions like 'Tell me about a time you failed' and salary negotiation tactics.",
+    "downloadUrl": "#",
+    "icon": "Briefcase"
+  },
+  {
+    "id": "r4",
+    "title": "Executive Business Email Templates Pack",
+    "category": "Business",
+    "type": "Templates",
+    "pages": "25 Templates",
+    "downloads": "22.6k",
+    "description": "Plug-and-play email templates for follow-ups, project updates, client proposals, and apologies.",
+    "downloadUrl": "#",
+    "icon": "Mail"
+  },
+  {
+    "id": "r5",
+    "title": "Daily English Pronunciation & Accent Practice Sheets",
+    "category": "Speaking",
+    "type": "Audio & PDF",
+    "pages": "15 Worksheets",
+    "downloads": "16.2k",
+    "description": "Mouth positioning guides, tongue twisters, intonation exercises, and audio drills.",
+    "downloadUrl": "#",
+    "icon": "Mic"
+  },
+  {
+    "id": "r6",
+    "title": "Public Speaking & Presentation Planner Workbook",
+    "category": "Soft Skills",
+    "type": "Interactive Workbook",
+    "pages": "28 Pages",
+    "downloads": "12.9k",
+    "description": "Speech structure blueprint, hook openers cheat sheet, and body language checklist.",
+    "downloadUrl": "#",
+    "icon": "Award"
+  }
+]

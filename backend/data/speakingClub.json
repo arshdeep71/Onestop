@@ -1,0 +1,38 @@
+{
+  "dailyChallenge": {
+    "title": "Daily 2-Minute Speech Challenge",
+    "prompt": "Describe a moment when you overcame a big challenge in your life or career. What did you learn?",
+    "tips": ["Use past tenses accurately", "Include 2 power adjectives like 'resilient' or 'transformative'", "Aim for smooth pacing without long pauses"],
+    "targetDuration": "90 - 120 seconds"
+  },
+  "practiceTopics": [
+    {
+      "id": "t1",
+      "category": "Career & Ambition",
+      "title": "What is your dream job and why?",
+      "difficulty": "Easy",
+      "keywords": ["Passion", "Growth opportunity", "Impact", "Leadership"]
+    },
+    {
+      "id": "t2",
+      "category": "Current Affairs & Tech",
+      "title": "Will AI replace jobs or make us more productive?",
+      "difficulty": "Intermediate",
+      "keywords": ["Automation", "Efficiency", "Human creativity", "Ethical implications"]
+    },
+    {
+      "id": "t3",
+      "category": "Culture & Travel",
+      "title": "If you could live anywhere in the world for one year, where would it be?",
+      "difficulty": "Easy",
+      "keywords": ["Cultural immersion", "Architecture", "Lifestyle", "Culinary experience"]
+    }
+  ],
+  "leaderboard": [
+    { "rank": 1, "name": "Mateo Rossi", "country": "Italy", "points": 1420, "streak": 28, "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80" },
+    { "rank": 2, "name": "Amina Al-Sayed", "country": "Egypt", "points": 1380, "streak": 24, "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" },
+    { "rank": 3, "name": "Kenji Sato", "country": "Japan", "points": 1290, "streak": 21, "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" },
+    { "rank": 4, "name": "Sofia Fernandez", "country": "Brazil", "points": 1150, "streak": 19, "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=150&q=80" },
+    { "rank": 5, "name": "Alex Chen", "country": "Taiwan", "points": 1080, "streak": 16, "avatar": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=150&q=80" }
+  ]
+}
