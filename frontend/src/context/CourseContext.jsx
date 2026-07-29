@@ -394,6 +394,11 @@ export const CourseProvider = ({ children }) => {
     return courses.find(c => c.id === idOrSlug || c.slug === idOrSlug) || defaultCourses[0];
   };
 
+  const filterCoursesByDifficulty = (level) => {
+    if (!level || level === 'All') return courses;
+    return courses.filter(c => c.level.toLowerCase().includes(level.toLowerCase()));
+  };
+
   return (
     <CourseContext.Provider value={{
       courses,
@@ -406,6 +411,7 @@ export const CourseProvider = ({ children }) => {
       setSearchQuery,
       loading,
       getCourseById,
+      filterCoursesByDifficulty,
       refreshData: fetchData
     }}>
       {children}
