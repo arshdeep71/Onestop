@@ -10,7 +10,9 @@ import { useCourses } from '../context/CourseContext';
 
 export default function LandingPage({ setActivePage, onSelectCourse, onOpenAuth, onSelectResource }) {
   const { courses, resources, liveClasses, selectedCategory, setSelectedCategory } = useCourses();
-  const [openFaq, setOpenFaq] = useState(0);
+  const toggleFaq = (index) => {
+    setOpenFaq(prev => prev === index ? null : index);
+  };
 
   const categories = ['All', 'Speaking', 'Grammar', 'Business', 'Soft Skills', 'Career', 'Vocabulary'];
 
