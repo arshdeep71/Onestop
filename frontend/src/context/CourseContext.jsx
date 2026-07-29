@@ -380,7 +380,10 @@ export const CourseProvider = ({ children }) => {
         fetch('http://localhost:5000/api/speaking-club').then(r => r.ok ? r.json() : null)
       ]);
 
-      if (resCourses) setCourses(resCourses);
+      if (resCourses) {
+        const courseArray = Array.isArray(resCourses) ? resCourses : (resCourses.courses || defaultCourses);
+        setCourses(courseArray);
+      }
       if (resResources) setResources(resResources);
       if (resLive) setLiveClasses(resLive);
       if (resClub) setSpeakingClub(resClub);

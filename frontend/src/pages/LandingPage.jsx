@@ -326,7 +326,7 @@ export default function LandingPage({ setActivePage, onSelectCourse, onOpenAuth,
             gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
             gap: '2rem'
           }}>
-            {courses
+            {(Array.isArray(courses) ? courses : [])
               .filter(c => selectedCategory === 'All' || c.category.toLowerCase() === selectedCategory.toLowerCase())
               .map((c) => (
                 <CourseCard key={c.id} course={c} onSelectCourse={onSelectCourse} />
