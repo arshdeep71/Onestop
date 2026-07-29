@@ -1,7 +1,11 @@
-import React from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Sparkles, X } from 'lucide-react';
 
 export default function AnnouncementBar({ onExploreClick }) {
+  const [dismissed, setDismissed] = useState(false);
+
+  if (dismissed) return null;
+
   return (
     <div style={{
       backgroundColor: '#6D28D9',
