@@ -140,7 +140,7 @@ app.get('/api/auth/me', authenticateToken, (req, res) => {
 
 // Courses API
 app.get('/api/courses', (req, res) => {
-  const { category, search } = req.query;
+  const { category, search, page = 1, limit = 20 } = req.query;
   let filtered = [...coursesData];
   if (category && category !== 'All') {
     filtered = filtered.filter(c => c.category.toLowerCase() === category.toLowerCase());
@@ -149,7 +149,19 @@ app.get('/api/courses', (req, res) => {
     const q = search.toLowerCase();
     filtered = filtered.filter(c => c.title.toLowerCase().includes(q) || c.description.toLowerCase().includes(q));
   }
-  res.json(filtered);
+
+  const pageNum = parseInt(page, 10);
+  const limitNum = parseInt(limit, 10);
+  const startIndex = (pageNum - 1) * limitNum;
+  const paginatedResults = filtered.slice(startIndex, startIndex + limitNum);
+
+  res.json({
+    total: filtered.length,
+    page: pageNum,
+    limit: limitNum,
+    totalPages: Math.ceil(filtered.length / limitNum),
+    courses: paginatedResults
+  });
 });
 
 app.get('/api/courses/:id', (req, res) => {
