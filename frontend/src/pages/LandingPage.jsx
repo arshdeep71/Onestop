@@ -15,23 +15,23 @@ export default function LandingPage({ setActivePage, onSelectCourse, onOpenAuth,
     setOpenFaq(prev => prev === index ? null : index);
   };
 
-  const categories = ['All', 'Speaking', 'Grammar', 'Business', 'Soft Skills', 'Career', 'Vocabulary'];
+  const categories = ['All', 'Career & Interviews', 'AI & Automation', 'Spoken English', 'Public Speaking', 'Leadership', 'Tech & Coding', 'Personal Growth'];
 
   const stats = [
-    { number: '50,000+', label: 'Active Students', icon: Users, color: '#6D28D9' },
-    { number: '500+', label: 'Free Video Lessons', icon: BookOpen, color: '#8B5CF6' },
-    { number: '30+', label: 'Structured Courses', icon: Award, color: '#F97316' },
-    { number: '100%', label: 'Free Forever', icon: Shield, color: '#22C55E' },
-    { number: '95%', label: 'Completion Rate', icon: Star, color: '#F59E0B' }
+    { number: '50,000+', label: 'Active Learners', icon: Users, color: '#6D28D9' },
+    { number: '500+', label: 'Video Masterclasses', icon: BookOpen, color: '#8B5CF6' },
+    { number: '30+', label: 'Career Roadmaps', icon: Award, color: '#F97316' },
+    { number: '100%', label: 'Free Access', icon: Shield, color: '#22C55E' },
+    { number: '95%', label: 'Placement Rate', icon: Star, color: '#F59E0B' }
   ];
 
   const learningPaths = [
-    { title: 'Beginner English', icon: '🌱', level: 'Level 1', desc: 'Build basic sentence structures, everyday vocabulary, and simple conversation confidence.', count: '6 Courses' },
-    { title: 'Intermediate English', icon: '🚀', level: 'Level 2', desc: 'Eliminate hesitation, refine tenses, and speak naturally in social & workplace settings.', count: '8 Courses' },
-    { title: 'Advanced English', icon: '⚡', level: 'Level 3', desc: 'Master native idioms, complex grammar nuances, and sophisticated vocabulary.', count: '5 Courses' },
-    { title: 'Professional Communication', icon: '💼', level: 'Career', desc: 'Executive email writing, workplace negotiations, and international business etiquette.', count: '4 Courses' },
-    { title: 'Interview Success', icon: '🎯', level: 'Career', desc: 'Ace high-stakes interviews with the STAR method and executive self-introductions.', count: '3 Courses' },
-    { title: 'Public Speaking & TED Talks', icon: '🎙️', level: 'Leadership', desc: 'Conquer stage fright, project vocal authority, and captivate any audience.', count: '4 Courses' }
+    { title: 'Interview Preparation Bootcamp', icon: '💼', level: 'Career', desc: 'Master HR questions, STAR framework stories, and live technical mock interviews.', count: '5 Courses' },
+    { title: 'AI Productivity & Automation', icon: '🤖', level: 'AI Skills', desc: 'Harness ChatGPT, prompt engineering, and workflow automation to 10x your output.', count: '4 Courses' },
+    { title: 'Executive Communication & Fluency', icon: '🗣️', level: 'Leadership', desc: 'Eliminate hesitation, project vocal authority, and lead high-stakes boardroom meetings.', count: '6 Courses' },
+    { title: 'Public Speaking & TEDx Coaching', icon: '🎙️', level: 'Leadership', desc: 'Conquer stage fright, design impactful slides, and captivate global audiences.', count: '4 Courses' },
+    { title: 'Full-Stack Web Development & Tech', icon: '💻', level: 'Engineering', desc: 'Build production React 19, Node.js, and cloud application backends.', count: '8 Courses' },
+    { title: 'Personal Growth & Confidence', icon: '⚡', level: 'Personal', desc: 'Master executive presence, habit formation, discipline, and high-performance mindset.', count: '5 Courses' }
   ];
 
   const whyChooseUs = [
@@ -98,7 +98,7 @@ export default function LandingPage({ setActivePage, onSelectCourse, onOpenAuth,
               borderRadius: '9999px',
               marginBottom: '1.5rem'
             }}>
-              <Sparkles size={16} style={{ color: '#F97316' }} /> World's #1 Free English Learning Platform
+              <Sparkles size={16} style={{ color: '#F97316' }} /> AI-Powered Career & Personal Growth Platform
             </div>
 
             <h1 style={{
@@ -109,11 +109,11 @@ export default function LandingPage({ setActivePage, onSelectCourse, onOpenAuth,
               letterSpacing: '-0.03em',
               marginBottom: '1.25rem'
             }}>
-              Speak English With <span style={{
+              Learn. Practice. <span style={{
                 background: 'linear-gradient(135deg, #6D28D9 0%, #8B5CF6 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
-              }}>Unstoppable Confidence.</span>
+              }}>Get Hired.</span>
             </h1>
 
             <p style={{
@@ -123,7 +123,7 @@ export default function LandingPage({ setActivePage, onSelectCourse, onOpenAuth,
               marginBottom: '2rem',
               maxWidth: '560px'
             }}>
-              Master spoken English, grammar, communication skills, vocabulary, interview preparation, public speaking, and business English through structured, completely free courses.
+              Accelerate your career with AI productivity masterclasses, interview bootcamps, executive communication, public speaking, technical skills, and 1-on-1 mentorship.
             </p>
 
             {/* CTAs */}

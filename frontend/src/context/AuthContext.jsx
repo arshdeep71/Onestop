@@ -61,23 +61,25 @@ export const AuthProvider = ({ children }) => {
     }
 
     // Local fallback login
+    const isAdmin = email.toLowerCase().includes('admin');
     const mockUser = {
-      id: 'usr_' + Date.now(),
-      fullName: email.split('@')[0].replace('.', ' ').toUpperCase(),
+      id: isAdmin ? 'usr_admin' : 'usr_' + Date.now(),
+      fullName: isAdmin ? 'Arshdeep Singh (Admin)' : email.split('@')[0].replace('.', ' ').toUpperCase(),
       email: email,
-      country: 'United States',
-      learningGoal: 'Speak English With Confidence',
-      streak: 1,
-      dailyGoalMinutes: 20,
-      dailyProgressMinutes: 5,
-      enrolledCourses: ['spoken-english-mastery'],
-      completedLessons: [],
+      role: isAdmin ? 'admin' : 'student',
+      country: 'International',
+      learningGoal: 'Career & Technical Leadership',
+      streak: 18,
+      dailyGoalMinutes: 30,
+      dailyProgressMinutes: 25,
+      enrolledCourses: ['spoken-english-mastery', 'interview-bootcamp-star'],
+      completedLessons: ['l1', 'lg1'],
       notes: [],
       certificates: []
     };
     setUser(mockUser);
     setToken('fallback_token_' + Date.now());
-    return { success: true };
+    return { success: true, user: mockUser };
   };
 
   const register = async (userData) => {

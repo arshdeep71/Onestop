@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import { CourseProvider } from './context/CourseContext';
 import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
@@ -19,11 +19,19 @@ import RegisterPage from './pages/RegisterPage';
 import AdminDashboard from './components/admin/AdminDashboard';
 
 function MainAppContent() {
+  const { user } = useAuth();
   const [activePage, setActivePage] = useState('home');
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [selectedLesson, setSelectedLesson] = useState(null);
   const [activeResource, setActiveResource] = useState(null);
   const [authModalMode, setAuthModalMode] = useState(null); // 'login' | 'register' | null
+
+  // If Admin logs in, show ONLY Admin Studio Portal
+  React.useEffect(() => {
+    if (user && (user.role === 'admin' || user.email?.toLowerCase().includes('admin'))) {
+      setActivePage('admin-studio');
+    }
+  }, [user]);
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

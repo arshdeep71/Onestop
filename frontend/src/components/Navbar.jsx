@@ -19,9 +19,11 @@ export default function Navbar({ activePage, setActivePage, onOpenAuth }) {
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'courses', label: 'Courses' },
+    { id: 'career-paths', label: 'Career Paths' },
+    { id: 'live-classes', label: 'Live Sessions' },
+    { id: 'mentorship', label: 'Mentorship' },
     { id: 'resources', label: 'Resources' },
-    { id: 'speaking-club', label: 'Speaking Club' },
-    { id: 'about', label: 'About' },
+    { id: 'community', label: 'Community' },
     { id: 'admin-studio', label: '⚡ Admin Studio' }
   ];
 

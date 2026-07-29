@@ -27,13 +27,19 @@ export default function StudentDashboard({ setActivePage, onSelectCourse, onOpen
   const continueCourse = enrolledCourses[0] || courses[0];
 
   const sidebarNav = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'my-courses', label: 'My Courses', icon: BookOpen },
-    { id: 'continue', label: 'Continue Learning', icon: PlayCircle },
-    { id: 'certificates', label: 'Certificates', icon: Award },
-    { id: 'resources', label: 'Resources & Notes', icon: FileText },
-    { id: 'speaking', label: 'Speaking Practice', icon: Mic },
-    { id: 'profile', label: 'My Profile', icon: User }
+    { id: 'dashboard', label: '🏠 Dashboard', icon: LayoutDashboard },
+    { id: 'my-courses', label: '📚 My Learning', icon: BookOpen },
+    { id: 'continue', label: '🎥 Continue Learning', icon: PlayCircle },
+    { id: 'learning-paths', label: '🎯 Learning Paths', icon: Sparkles },
+    { id: 'interview-prep', label: '💼 Interview Prep', icon: Award },
+    { id: 'speaking', label: '🗣 Communication Skills', icon: Mic },
+    { id: 'mentorship', label: '🤝 1-on-1 Mentorship', icon: MessageSquare },
+    { id: 'live-classes', label: '🎥 Live Classes', icon: Calendar },
+    { id: 'meetings', label: '📅 My Meetings', icon: Clock },
+    { id: 'resources', label: '📂 Resources & Notes', icon: FileText },
+    { id: 'certificates', label: '🏆 Certificates', icon: Award },
+    { id: 'progress', label: '📈 Progress Graph', icon: Flame },
+    { id: 'profile', label: '👤 Profile & Settings', icon: User }
   ];
 
   return (
@@ -150,18 +156,18 @@ export default function StudentDashboard({ setActivePage, onSelectCourse, onOpen
           }}>
             <div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#6D28D9', fontWeight: '700', fontSize: '0.85rem' }}>
-                <Sparkles size={16} style={{ color: '#F97316' }} /> Welcome Back to FluentX
+                <Sparkles size={16} style={{ color: '#F97316' }} /> Career Acceleration Platform
               </div>
               <h2 style={{ fontSize: '1.8rem', fontWeight: '800', color: '#111827', marginTop: '0.2rem' }}>
-                Ready to practice, {user.fullName.split(' ')[0]}?
+                Welcome back, {user.fullName.split(' ')[0]} 👋
               </h2>
-              <p style={{ color: '#6B7280', fontSize: '0.95rem', marginTop: '0.25rem' }}>
-                Goal: {user.learningGoal || 'Speak English With Confidence'}
+              <p style={{ color: '#6B7280', fontSize: '0.95rem', marginTop: '0.25rem', fontWeight: '500' }}>
+                Continue building your skills today — <strong>Learn • Practice • Get Hired</strong>
               </p>
             </div>
 
-            {/* Streak & Daily Progress Cards */}
-            <div style={{ display: 'flex', gap: '1rem' }}>
+            {/* Streak & Today's Progress Cards */}
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <div style={{
                 backgroundColor: '#FFF7ED',
                 border: '1px solid #FFEDD5',
@@ -170,8 +176,24 @@ export default function StudentDashboard({ setActivePage, onSelectCourse, onOpen
                 textAlign: 'center'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.3rem', color: '#EA580C', fontWeight: '800', fontSize: '1.3rem' }}>
-                  <Flame size={20} fill="#EA580C" /> {user.streak || 7} Days
+                  <Flame size={20} fill="#EA580C" /> 🔥 {user.streak || 18} Days
                 </div>
+                <div style={{ fontSize: '0.75rem', color: '#C2410C', fontWeight: '700', marginTop: '0.2rem' }}>Learning Streak</div>
+              </div>
+
+              <div style={{
+                backgroundColor: '#F3E8FF',
+                border: '1px solid #E9D5FF',
+                borderRadius: '16px',
+                padding: '1rem 1.25rem',
+                textAlign: 'center'
+              }}>
+                <div style={{ color: '#6D28D9', fontWeight: '800', fontSize: '1.2rem' }}>
+                  35 mins learned
+                </div>
+                <div style={{ fontSize: '0.75rem', color: '#7E22CE', fontWeight: '700', marginTop: '0.2rem' }}>2 Courses • 1 Interview Completed</div>
+              </div>
+            </div>
                 <div style={{ fontSize: '0.75rem', fontWeight: '600', color: '#9A3412' }}>Learning Streak</div>
               </div>
 
@@ -249,6 +271,35 @@ export default function StudentDashboard({ setActivePage, onSelectCourse, onOpen
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* 1-on-1 Mentorship & Live Meeting Booker Widget */}
+          <div style={{
+            backgroundColor: '#1E293B',
+            color: '#FFFFFF',
+            borderRadius: '20px',
+            padding: '1.75rem',
+            marginBottom: '2rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '1rem'
+          }}>
+            <div>
+              <span style={{ color: '#F97316', fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                🤝 1-on-1 Mentorship & Zoom Live Sessions
+              </span>
+              <h3 style={{ fontSize: '1.3rem', fontWeight: '800', marginTop: '0.2rem', marginBottom: '0.4rem' }}>
+                Book 1-on-1 Mock Interview or Executive Mentorship
+              </h3>
+              <p style={{ color: '#94A3B8', fontSize: '0.875rem', margin: 0 }}>
+                Practice live HR & Technical interviews with certified career coaches and receive real-time feedback.
+              </p>
+            </div>
+            <button className="btn btn-accent" style={{ padding: '0.75rem 1.5rem', fontWeight: '700' }}>
+              📅 Schedule Session
+            </button>
           </div>
 
           {/* Certificates Showcase */}
