@@ -11,6 +11,9 @@ export default function CertificateModal({ certificate, onClose }) {
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div 
+        role="dialog"
+        aria-modal="true"
+        aria-label="Course Certificate Modal"
         onClick={(e) => e.stopPropagation()}
         style={{
           backgroundColor: '#FFFFFF',
