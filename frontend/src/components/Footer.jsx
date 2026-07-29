@@ -183,7 +183,8 @@ export default function Footer({ setActivePage, onOpenAuth }) {
           <div>
             © {new Date().getFullYear()} FluentX Inc. Built with <Heart size={14} style={{ color: '#EF4444', display: 'inline' }} /> for global learners. All courses are completely free.
           </div>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+            <span style={{ backgroundColor: '#374151', color: '#D1D5DB', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.75rem', fontWeight: '600' }}>v2.4.0</span>
             <span style={{ cursor: 'pointer' }}>Privacy Policy</span>
             <span style={{ cursor: 'pointer' }}>Terms of Service</span>
             <span style={{ cursor: 'pointer' }}>Cookie Settings</span>
