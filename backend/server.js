@@ -65,7 +65,14 @@ const authenticateToken = (req, res, next) => {
 
 // Health Check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', platform: 'FluentX - Premium English Learning Platform API', timestamp: new Date() });
+  res.json({
+    status: 'ok',
+    platform: 'FluentX - Premium English Learning Platform API',
+    uptimeSeconds: Math.floor(process.uptime()),
+    nodeVersion: process.version,
+    memoryUsageMB: Math.round(process.memoryUsage().heapUsed / 1024 / 1024),
+    timestamp: new Date().toISOString()
+  });
 });
 
 // Auth Routes
