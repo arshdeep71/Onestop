@@ -16,6 +16,7 @@ import SpeakingClubPage from './pages/SpeakingClubPage';
 import AboutPage from './pages/AboutPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import AdminDashboard from './components/admin/AdminDashboard';
 
 function MainAppContent() {
   const [activePage, setActivePage] = useState('home');
@@ -125,6 +126,12 @@ function MainAppContent() {
             onOpenLesson={handleOpenLesson}
           />
         );
+      case 'admin-studio':
+        return (
+          <AdminDashboard
+            onBackToApp={() => handleNavigate('home')}
+          />
+        );
       default:
         return (
           <LandingPage
@@ -137,12 +144,12 @@ function MainAppContent() {
     }
   };
 
-  // Hide Navbar and Footer when inside Lesson Player full view for immersive focus mode
-  const isLessonPlayer = activePage === 'lesson-player';
+  // Hide Navbar and Footer when inside Lesson Player or Admin Studio view
+  const isCustomLayout = activePage === 'lesson-player' || activePage === 'admin-studio';
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      {!isLessonPlayer && (
+      {!isCustomLayout && (
         <>
           <AnnouncementBar onExplore={() => handleNavigate('courses')} />
           <Navbar
@@ -157,7 +164,7 @@ function MainAppContent() {
         {renderContent()}
       </main>
 
-      {!isLessonPlayer && (
+      {!isCustomLayout && (
         <Footer
           setActivePage={handleNavigate}
           onOpenAuth={handleOpenAuth}

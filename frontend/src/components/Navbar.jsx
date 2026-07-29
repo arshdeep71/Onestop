@@ -21,7 +21,8 @@ export default function Navbar({ activePage, setActivePage, onOpenAuth }) {
     { id: 'courses', label: 'Courses' },
     { id: 'resources', label: 'Resources' },
     { id: 'speaking-club', label: 'Speaking Club' },
-    { id: 'about', label: 'About' }
+    { id: 'about', label: 'About' },
+    { id: 'admin-studio', label: '⚡ Admin Studio' }
   ];
 
   return (
