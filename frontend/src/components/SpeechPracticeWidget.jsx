@@ -8,6 +8,9 @@ export default function SpeechPracticeWidget({ targetSentence = "I was wondering
   const [score, setScore] = useState(null);
   const [feedback, setFeedback] = useState('');
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
+  const [isSpeechSupported] = useState(() => {
+    return 'SpeechRecognition' in window || 'webkitSpeechRecognition' in window;
+  });
 
   // Audio Native Pronunciation Synthesis
   const playNativeSpeech = () => {
