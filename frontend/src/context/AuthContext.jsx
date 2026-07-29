@@ -163,10 +163,16 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const [authError, setAuthError] = useState(null);
+
+  const clearAuthError = () => setAuthError(null);
+
   return (
     <AuthContext.Provider value={{
       user,
       token,
+      authError,
+      clearAuthError,
       login,
       register,
       logout,
