@@ -39,6 +39,7 @@ const testimonials = [
 
 export default function TestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => {
