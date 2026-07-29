@@ -3,8 +3,15 @@ import { X, Download, FileText, CheckCircle2, Sparkles, BookOpen } from 'lucide-
 
 export default function ResourceModal({ resource, onClose }) {
   const [downloaded, setDownloaded] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
 
   if (!resource) return null;
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setCopiedLink(true);
+    setTimeout(() => setCopiedLink(false), 2000);
+  };
 
   const handleDownload = () => {
     setDownloaded(true);
