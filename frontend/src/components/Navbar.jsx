@@ -25,7 +25,7 @@ export default function Navbar({ activePage, setActivePage, onOpenAuth }) {
   ];
 
   return (
-    <nav style={{
+    <nav role="navigation" aria-label="Main Navigation" style={{
       position: 'sticky',
       top: 0,
       zIndex: 100,
