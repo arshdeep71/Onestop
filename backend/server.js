@@ -11,6 +11,16 @@ const JWT_SECRET = 'fluentx_super_secret_jwt_key_2026';
 app.use(cors());
 app.use(express.json());
 
+// Request Logging Middleware
+app.use((req, res, next) => {
+  const start = Date.now();
+  res.on('finish', () => {
+    const duration = Date.now() - start;
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl} ${res.statusCode} - ${duration}ms`);
+  });
+  next();
+});
+
 // Load Mock Data
 const coursesData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'courses.json')));
 const resourcesData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'resources.json')));
