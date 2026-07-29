@@ -18,6 +18,7 @@ export default function QuizEngine({ quizList = [], onCompleteQuiz }) {
   }
 
   const currentQ = quizList[currentIndex];
+  const progressPercentage = Math.round(((currentIndex + 1) / quizList.length) * 100);
 
   const handleSelectOption = (index) => {
     if (isSubmitted) return;
