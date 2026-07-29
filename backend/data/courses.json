@@ -11,6 +11,8 @@
     "rating": 4.9,
     "reviewsCount": 1280,
     "isFree": true,
+    "certificateEligible": true,
+    "lastUpdated": "2026-07-25",
     "badge": "Popular",
     "coverImage": "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80",
     "instructor": {
