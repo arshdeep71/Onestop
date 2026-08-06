@@ -20,6 +20,7 @@ export default function LessonPlayerPage({ course, lesson, onBack, onSelectLesso
   const isCompleted = user?.completedLessons?.includes(lesson.id);
 
   const handleMarkComplete = () => {
+    // Verify course completion status and grant certificate if all lessons are marked done
     markLessonComplete(lesson.id);
 
     // Check if course is fully finished to grant certificate
