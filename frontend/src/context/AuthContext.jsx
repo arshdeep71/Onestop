@@ -2,6 +2,10 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
 
+/**
+ * AuthProvider component manages global authentication state,
+ * local storage synchronization, and handles login/logout fallbacks.
+ */
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
     const saved = localStorage.getItem('fluentx_user');
