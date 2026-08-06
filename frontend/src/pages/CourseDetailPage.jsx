@@ -13,6 +13,7 @@ export default function CourseDetailPage({ course, onBack, onOpenLesson, onOpenA
   const isEnrolled = user?.enrolledCourses?.includes(course.id);
 
   const handleStartCourse = () => {
+    // Handle auto-enrollment or redirects to auth registration for new users
     if (!user) {
       onOpenAuth('register');
       return;
