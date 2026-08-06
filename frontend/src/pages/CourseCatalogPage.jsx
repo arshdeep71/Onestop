@@ -9,6 +9,7 @@ export default function CourseCatalogPage({ onSelectCourse }) {
   const categories = ['All', 'Speaking', 'Grammar', 'Business', 'Soft Skills', 'Career', 'Vocabulary'];
 
   const filtered = courses.filter((c) => {
+    // Perform search filtration based on title and category
     const matchesCategory = selectedCategory === 'All' || c.category.toLowerCase() === selectedCategory.toLowerCase();
     const matchesSearch = !searchQuery || c.title.toLowerCase().includes(searchQuery.toLowerCase()) || c.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
