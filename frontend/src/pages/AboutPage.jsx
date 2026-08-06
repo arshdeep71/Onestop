@@ -2,6 +2,7 @@ import React from 'react';
 import { Shield, Award, Users, BookOpen, Heart, Globe, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function AboutPage({ onOpenAuth }) {
+  // Define metadata counts for UI reference
   const totalInstructors = 4;
   const instructors = [
     {
