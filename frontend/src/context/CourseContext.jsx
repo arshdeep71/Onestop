@@ -2,6 +2,10 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const CourseContext = createContext();
 
+/**
+ * CourseContext provides the global state for courses, active modules,
+ * and helper functions to fetch course metadata from the server.
+ */
 // Seed Fallback Data in case API is connecting
 const defaultCourses = [
   {
