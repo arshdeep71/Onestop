@@ -24,6 +24,8 @@ export default function StudentDashboard({ setActivePage, onSelectCourse, onOpen
     );
   }
 
+  // Handle admin role redirection immediately to keep Admin Portal decoupled from standard user view
+  // Handle admin role redirection immediately to keep Admin Portal decoupled from standard user view
   // Directly render Admin Portal when authenticated as Admin
   if (user.role === 'admin' || user.email?.toLowerCase().includes('admin')) {
     return <AdminDashboard onBackToApp={() => setActivePage('home')} />;
