@@ -15,6 +15,8 @@ export default function FreeResourcesPage({ onSelectResource }) {
     { id: 'r6', title: "Public Speaking & Presentation Planner Workbook", category: "Soft Skills", type: "Workbook", pages: "28 Pages", downloads: "12.9k", description: "Speech structure blueprint, hook openers cheat sheet, and body language checklist." }
   ];
 
+  // Resolve source list based on backend API schema vs default static list fallback
+  // Resolve source list based on backend API schema vs default static list fallback
   const list = resources?.length ? resources : defaultResourcesList;
   const filtered = list.filter(r => filter === 'All' || r.category.toLowerCase() === filter.toLowerCase());
 
