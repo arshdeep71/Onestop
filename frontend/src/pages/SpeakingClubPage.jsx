@@ -12,6 +12,8 @@ export default function SpeakingClubPage({ onOpenAuth }) {
     { id: 't3', category: 'Culture & Life', title: 'What is the best advice you have ever received?', difficulty: 'Easy', keywords: ['Wisdom', 'Perspective', 'Mentorship'] }
   ];
 
+  // Default to static sample topics if server database records are unpopulated
+  // Default to static sample topics if server database records are unpopulated
   const topics = speakingClub?.practiceTopics || fallbackTopics;
   const leaderboard = speakingClub?.leaderboard || [
     { rank: 1, name: "Mateo Rossi", country: "Italy", points: 1420, streak: 28, avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80" },
