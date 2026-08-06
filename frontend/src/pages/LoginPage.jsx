@@ -10,6 +10,7 @@ export default function LoginPage({ onClose, onSwitchToRegister, onSuccess }) {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
+    // Validate credentials before sending request
     e.preventDefault();
     setError('');
     setLoading(true);
