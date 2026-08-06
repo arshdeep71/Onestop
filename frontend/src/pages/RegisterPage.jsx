@@ -17,6 +17,7 @@ export default function RegisterPage({ onClose, onSwitchToLogin, onSuccess }) {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
+    // Update formData state keys dynamically based on input name attributes
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
