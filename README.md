@@ -37,11 +37,12 @@ npm run dev
  
  
  
+ ## Project Update
+Updated project documentation.
  
  
  
- 
- 
+ Documentation updated with Ankit.
  
  
  
